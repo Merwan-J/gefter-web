@@ -1,0 +1,111 @@
+import type { Config } from 'tailwindcss';
+
+const config: Config = {
+  content: [
+    './src/app/**/*.{ts,tsx}',
+    './src/components/**/*.{ts,tsx}',
+    './src/features/**/*.{ts,tsx}',
+    './src/lib/**/*.{ts,tsx}',
+  ],
+  theme: {
+    extend: {
+      colors: {
+        primary: '#9F2142',
+        'primary-bright': '#BF284E',
+        accent: '#9F2142',
+        'accent-alt': '#C42A51',
+        'accent-dark': '#d44a6d',
+        'background-light': '#FFFFFF',
+        'background-dark': '#101322',
+        'background-dark-alt': '#121212',
+        'card-light': '#F6F6F8',
+        'card-light-alt': '#F7F7F7',
+        'card-dark': '#1F212F',
+        'card-dark-alt': '#1E1E1E',
+        'text-primary': '#1C1C1E',
+        'text-secondary': '#6B7280',
+        'text-primary-dark': '#D1D5DB',
+        'text-secondary-dark': '#9CA3AF',
+        'text-light-primary': '#F5F5F7',
+        'text-light-secondary': '#A0AEC0',
+        'wise-green': '#29A349',
+        'wise-green-bright': '#33D15B',
+        'wise-green-alt': '#4CD964',
+        'wise-red': '#E53E3E',
+        'wise-red-alt': '#FF3B30',
+        'wise-red-dark': '#F87171',
+        'chip-yellow': '#FFC700',
+      },
+      fontFamily: {
+        sans: ['var(--font-plus-jakarta)', '"Plus Jakarta Sans"', 'sans-serif'],
+        display: ['var(--font-plus-jakarta)', 'sans-serif'],
+        body: ['var(--font-plus-jakarta)', 'sans-serif'],
+      },
+      fontWeight: {
+        regular: '400',
+        medium: '500',
+        semibold: '600',
+        bold: '700',
+        extrabold: '800',
+      },
+      fontSize: {
+        xs: '0.75rem',
+        sm: '0.875rem',
+        base: '1rem',
+        lg: '1.125rem',
+        xl: '1.25rem',
+        '2xl': '1.5rem',
+        '3xl': '1.875rem',
+        '4xl': '2.25rem',
+        '5xl': '3rem',
+        '6xl': '3.75rem',
+        '7xl': '4.5rem',
+      },
+      lineHeight: {
+        tight: '1.25',
+        snug: '1.35',
+        normal: '1.5',
+      },
+      letterSpacing: {
+        tight: '-0.015em',
+        tighter: '-0.05em',
+      },
+      borderRadius: {
+        DEFAULT: '1rem',
+        lg: '1.25rem',
+        xl: '1.5rem',
+        '2xl': '3rem',
+        full: '9999px',
+        'rounded-lg': '0.5rem',
+        'rounded-xl': '0.75rem',
+        'rounded-md': '0.375rem',
+        'rounded-sm': '0.125rem',
+      },
+      boxShadow: {
+        sm: '0 1px 2px rgba(15, 23, 42, 0.12)',
+        md: '0 4px 12px rgba(15, 23, 42, 0.12)',
+        lg: '0 12px 24px rgba(15, 23, 42, 0.16)',
+      },
+      backdropBlur: {
+        sm: '4px',
+        lg: '16px',
+      },
+      opacity: {
+        80: '0.8',
+        90: '0.9',
+      },
+      zIndex: {
+        10: '10',
+        20: '20',
+      },
+      minHeight: {
+        screen: '100dvh',
+        'design-812': '812px',
+        'design-884': '884px',
+      },
+    },
+  },
+  plugins: [],
+};
+
+export default config;

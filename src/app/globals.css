@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #9f2142;
+  --color-primary-bright: #bf284e;
+  --color-accent: #9f2142;
+  --color-accent-alt: #c42a51;
+  --color-background-light: #ffffff;
+  --color-background-dark: #101322;
+  --color-card-light: #f6f6f8;
+  --color-card-light-alt: #f7f7f7;
+  --color-card-dark: #1f212f;
+  --color-card-dark-alt: #1e1e1e;
+  --color-text-primary: #1c1c1e;
+  --color-text-secondary: #6b7280;
+  --color-text-primary-dark: #d1d5db;
+  --color-text-secondary-dark: #9ca3af;
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.12);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.12);
+  --shadow-lg: 0 12px 24px rgba(15, 23, 42, 0.16);
+}
+
+@layer base {
+  html {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-color: var(--color-background-light);
+    color: var(--color-text-primary);
+  }
+
+  body {
+    @apply bg-background-light text-text-primary min-h-screen font-sans;
+  }
+
+  a {
+    @apply text-primary hover:text-primary-bright;
+  }
+}
+
+body.theme-dark {
+  background-color: var(--color-background-dark);
+  color: var(--color-text-primary-dark);
+}
+
+html.theme-dark {
+  background-color: var(--color-background-dark);
+  color: var(--color-text-primary-dark);
+}
+
+body.theme-dark a {
+  color: var(--color-accent);
+}
+
+body.theme-dark .bg-background-light {
+  background-color: var(--color-background-dark) !important;
+}
+
+body.theme-dark .bg-card-light,
+body.theme-dark .bg-white {
+  background-color: var(--color-card-dark) !important;
+}
+
+body.theme-dark .bg-card-light-alt,
+body.theme-dark .bg-white\/90 {
+  background-color: var(--color-card-dark-alt) !important;
+}
+
+body.theme-dark .text-text-primary {
+  color: var(--color-text-primary-dark) !important;
+}
+
+body.theme-dark .text-text-secondary {
+  color: var(--color-text-secondary-dark) !important;
+}
+
+body.theme-dark .border-gray-200\/60 {
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+body.theme-dark .shadow-elevated-sm,
+body.theme-dark .shadow-elevated-md,
+body.theme-dark .shadow-elevated-lg {
+  box-shadow: none;
+}
+
+body.theme-dark .hover\:bg-card-light:hover {
+  background-color: var(--color-card-dark) !important;
+}
+
+@layer utilities {
+  .shadow-elevated-sm {
+    box-shadow: var(--shadow-sm);
+  }
+
+  .shadow-elevated-md {
+    box-shadow: var(--shadow-md);
+  }
+
+  .shadow-elevated-lg {
+    box-shadow: var(--shadow-lg);
+  }
+}
